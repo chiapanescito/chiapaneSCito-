@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>chiapaneSCito | Pan al Mayoreo</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff8ef;
+    color:#3b2114;
+    line-height:1.5;
+}
+
+/* AVISO SUPERIOR */
+.aviso{
+    background:#d28a32;
+    color:white;
+    text-align:center;
+    padding:10px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+/* ENCABEZADO */
+header{
+    background:linear-gradient(135deg,#32180c,#6b3518);
+    color:white;
+    text-align:center;
+    padding:35px 20px 45px;
+}
+
+.logo{
+    width:125px;
+    max-width:70%;
+    margin-bottom:12px;
+}
+
+header h1{
+    font-size:44px;
+    letter-spacing:1px;
+}
+
+header p{
+    color:#ffd89b;
+    font-size:18px;
+    margin-top:8px;
+}
+
+/* BOTONES */
+.boton{
+    display:inline-block;
+    text-decoration:none;
+    background:#d28a32;
+    color:white;
+    padding:15px 30px;
+    border-radius:50px;
+    font-weight:bold;
+    margin-top:20px;
+    box-shadow:0 7px 20px rgba(0,0,0,.18);
+}
+
+.boton:hover{
+    background:#b66d1c;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:55px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.hero h2{
+    font-size:34px;
+    color:#6b3518;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:750px;
+    margin:auto;
+}
+
+/* SECCIONES */
+section{
+    padding:45px 20px;
+}
+
+.contenedor{
+    max-width:1100px;
+    margin:auto;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.titulo h2{
+    color:#6b3518;
+    font-size:32px;
+}
+
+.titulo p{
+    margin-top:8px;
+}
+
+/* BENEFICIOS */
+.beneficios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:22px;
+}
+
+.beneficio{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.beneficio h3{
+    color:#6b3518;
+    margin-bottom:10px;
+}
+
+/* COMO FUNCIONA */
+.pasos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:22px;
+}
+
+.paso{
+    background:#f3dfc3;
+    padding:25px;
+    border-radius:18px;
+}
+
+.numero{
+    display:inline-flex;
+    width:40px;
+    height:40px;
+    align-items:center;
+    justify-content:center;
+    background:#d28a32;
+    color:white;
+    border-radius:50%;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.paso h3{
+    margin-bottom:8px;
+    color:#6b3518;
+}
+
+/* PRODUCTOS */
+.productos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.producto{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,.10);
+}
+
+.producto img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    display:block;
+}
+
+.producto-contenido{
+    padding:22px;
+}
+
+.producto h3{
+    color:#6b3518;
+    font-size:24px;
+    margin-bottom:5px;
+}
+
+.precio{
+    font-size:27px;
+    font-weight:bold;
+    color:#d28a32;
+    margin:8px 0;
+}
+
+.producto ul{
+    list-style:none;
+    margin-top:12px;
+}
+
+.producto li{
+    margin:7px 0;
+}
+
+/* ETIQUETAS */
+.etiqueta{
+    display:inline-block;
+    background:#6b3518;
+    color:white;
+    padding:7px 13px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    margin:8px 0;
+}
+
+.mas-pedido{
+    background:#d28a32;
+}
+
+/* PAQUETE PRUEBA */
+.prueba{
+    background:#f3dfc3;
+}
+
+/* MEDIO MAYOREO */
+.medio{
+    background:#fff;
+}
+
+.subtitulo{
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    color:#6b3518;
+    margin-bottom:30px;
+}
+
+/* ESPECIALIDADES */
+.especialidades{
+    background:#f3dfc3;
+}
+
+.aviso-especial{
+    text-align:center;
+    background:#6b3518;
+    color:white;
+    padding:15px;
+    border-radius:12px;
+    max-width:800px;
+    margin:0 auto 30px;
+    font-weight:bold;
+}
+
+/* BOTONES DE WHATSAPP */
+.whatsapp{
+    background:#4f8f45;
+}
+
+.whatsapp:hover{
+    background:#3d7335;
+}
+
+/* REFIERE */
+.refiere{
+    text-align:center;
+    background:#fff;
+}
+
+.boton-refiere{
+    background:#d28a32;
+    font-size:18px;
+}
+
+.boton-refiere:hover{
+    background:#b66d1c;
+}
+
+/* DINAMICA */
+.dinamica{
+    text-align:center;
+    background:#f3dfc3;
+}
+
+.boton-dinamica{
+    background:#6b3518;
+    font-size:18px;
+}
+
+.boton-dinamica:hover{
+    background:#4d2411;
+}
+
+/* PUNTO DE VENTA */
+.punto-venta{
+    text-align:center;
+    background:linear-gradient(135deg,#32180c,#6b3518);
+    color:white;
+}
+
+.punto-venta h2{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.punto-venta p{
+    max-width:700px;
+    margin:auto;
+}
+
+.punto-venta .boton{
+    background:#d28a32;
+}
+
+/* REDES SOCIALES AL FINAL */
+.redes{
+    text-align:center;
+    padding:50px 20px;
+    background:#fff8ef;
+}
+
+.redes h2{
+    color:#6b3518;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.redes a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    text-decoration:none;
+    background:#6b3518;
+    color:white;
+    padding:13px 22px;
+    border-radius:30px;
+    margin:6px;
+    font-weight:bold;
+}
+
+.redes a:hover{
+    background:#d28a32;
+}
+
+/* LOGUITOS */
+.logo-red{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:25px;
+    height:25px;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.logo-facebook{
+    font-family:Arial,sans-serif;
+}
+
+.logo-tiktok{
+    font-family:Arial,sans-serif;
+}
+
+/* WHATSAPP FLOTANTE */
+.whatsapp-flotante{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:58px;
+    height:58px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    font-weight:bold;
+    box-shadow:0 5px 18px rgba(0,0,0,.25);
+    z-index:1000;
+}
+
+/* PIE */
+footer{
+    background:#32180c;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+footer strong{
+    color:#ffd89b;
+}
+
+/* CELULAR */
+@media(max-width:600px){
+
+    header h1{
+        font-size:34px;
+    }
+
+    header p{
+        font-size:16px;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+
+    .titulo h2{
+        font-size:27px;
+    }
+
+    .producto img{
+        height:220px;
+    }
+
+    .boton{
+        padding:14px 24px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- AVISO -->
+<div class="aviso">
+    PAN CALIENTE · PAN RECIÉN HECHO · VENTA AL MAYOREO
+</div>
+
+
+<!-- ENCABEZADO -->
+<header>
+
+    <img
+        src="logo-chiapanescito.png"
+        alt="Logo chiapaneSCito"
+        class="logo"
+    >
+
+    <h1>chiapaneSCito</h1>
+
+    <p>rico PAN de Chiapa de Corzo</p>
+
+    <a href="quienes-somos.html" class="boton">
+        CONOCE QUIÉNES SOMOS
+    </a>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <h2>Pan caliente y recién hecho</h2>
+
+    <p>
+        Para tiendas, cafeterías, negocios, distribuidores
+        y emprendimientos.
+    </p>
+
+    <p style="margin-top:15px;">
+        Una oportunidad real para negocios o emprendedores.
+    </p>
+
+</section>
+
+
+<!-- BENEFICIOS -->
+<section>
+
+    <div class="contenedor">
+
+        <div class="titulo">
+            <h2>¿Por qué vender chiapaneSCito?</h2>
+            <p>
+                Conoce las ventajas de vender chiapaneSCito
+                e incrementar tus ingresos.
+            </p>
+        </div>
+
+        <div class="beneficios">
+
+            <div class="beneficio">
+                <h3>🥖 Pan caliente</h3>
+                <p>
+                    Pan fresco y recién hecho para ofrecer
+                    a tus clientes.
+                </p>
+            </div>
+
+            <div class="beneficio">
+                <h3>🚚 Recibe en tu domicilio o negocio</h3>
+                <p>
+                    Entregas físicas: lunes, martes y miércoles
+                    en Tuxtla Gutiérrez y Chiapa de Corzo.
+                </p>
+                <p style="margin-top:8px;">
+                    Martes: San Cristóbal.
+                </p>
+                <p style="margin-top:8px;">
+                    FORÁNEOS: envíos por ruta local o paquetería
+                    <strong>CON COSTO EXTRA</strong>.
+                </p>
+            </div>
+
+            <div class="beneficio">
+                <h3>💰 Precio de mayoreo</h3>
+                <p>
+                    Ser distribuidor te da acceso a una
+                    inversión preferente.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COMO FUNCIONA -->
+<section>
+
+    <div class="contenedor">
+
+        <div class="titulo">
+            <h2>¿Cómo funciona?</h2>
+        </div>
+
+        <div class="pasos">
+
+            <div class="paso">
+                <span class="numero">1</span>
+                <h3>Elige tu paquete</h3>
+                <p>
+                    Selecciona del catálogo los paquetes
+                    que requieras.
+                </p>
+            </div>
+
+            <div class="paso">
+                <span class="numero">2</span>
+                <h3>Escríbenos</h3>
+                <p>
+                    Proporciona las referencias de tu entrega
+                    y establece tu método de pago.
+                </p>
+            </div>
+
+            <div class="paso">
+                <span class="numero">3</span>
+                <h3>Comienza a vender</h3>
+                <p>
+                    Recibe tu pedido y gana más vendiendo
+                    chiapaneSCito con tus clientes.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PAQUETE PRUEBA -->
+<section class="prueba">
+
+    <div class="contenedor">
+
+        <div class="titulo">
+            <h2>Paquete Prueba</h2>
+            <p>Conoce nuestra variedad antes de elegir tu paquete.</p>
+        </div>
+
+        <div class="productos">
+
+            <div class="producto">
+
+                <img
+                    src="paquete-prueba.jpeg"
+                    alt="Paquete Prueba chiapaneSCito"
+                >
+
+                <div class="producto-contenido">
+
+                    <h3>Paquete Prueba</h3>
+
+                    <div class="precio">$250</div>
+
+                    <ul>
+                        <li>✓ Variedad de pan tradicional</li>
+                        <li>✓ Variedad de pan artesanal</li>
+                        <li>✓ Ideal para conocer nuestros productos</li>
+                    </ul>
+
+                    <a
+                        class="boton whatsapp"
+                        target="_blank"
+                        href="https://wa.me/529616581640?text=Hola,%20quiero%20pedir%20el%20Paquete%20Prueba%20de%20chiapaneSCito%20de%20$250."
+                    >
+                        PEDIR POR WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MEDIO MAYOREO -->
+<section class="medio">
+
+    <div class="contenedor">
+
+        <div class="titulo">
+            <h2>Medio Mayoreo</h2>
+
+            <p class="subtitulo">
+                Cada opción de Medio Mayoreo en $235
+            </p>
+        </div>
+
+
+        <div class="productos">
+
+            <!-- TRADICIONAL -->
+            <div class="producto">
+
+                <img
+                    src="medio-mayoreo-tradicional.png"
+                    alt="Medio Mayoreo Tradicional"
+                >
+
+                <div class="producto-contenido">
+
+                    <h3>Medio Mayoreo Tradicional</h3>
+
+                    <p>Pan Tradicional 30 grs</p>
+
+                    <div class="precio">$235</div>
+
+                    <ul>
+                        <li>✓ Pan tradicional recién hecho</li>
+                        <li>✓ Variedad de modelos</li>
+                        <li>✓ Ideal para iniciar o aumentar tu venta</li>
+                    </ul>
+
+                    <a
+                        class="boton whatsapp"
+                        target="_blank"
+                        href="https://wa.me/529616581640?text=Hola,%20quiero%20pedir%20Medio%20Mayoreo%20Tradicional%20de%20$235."
+                    >
+                        PEDIR POR WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ARTESANAL -->
+            <div class="producto">
+
+                <img
+                    src="medio-mayoreo-artesanal.png"
+                    alt="Medio Mayoreo Artesanal"
+                >
+
+                <div class="producto-contenido">
+
+                    <h3>Medio Mayoreo Artesanal</h3>
+
+                    <p>Pan Artesanal 60 grs</p>
+
+                    <div class="precio">$235</div>
+
+                    <ul>
+                        <li>✓ Pan artesanal recién hecho</li>
+                        <li>✓ Textura suave y deliciosos rellenos</li>
+                        <li>✓ Ideal para iniciar o aumentar tu venta</li>
+                    </ul>
+
+                    <a
+                        class="boton whatsapp"
+                        target="_blank"
+                        href="https://wa.me/529616581640?text=Hola,%20quiero%20pedir%20Medio%20Mayoreo%20Artesanal%20de%20$235."
+                    >
+                        PEDIR POR WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ESPECIALIDADES -->
+<section class="especialidades">
+
+    <div class="contenedor">
+
+        <div class="titulo">
+
+            <h2>Especialidades</h2>
+
+        </div>
+
+        <div class="aviso-especial">
+            Producto exclusivo sobre pedido.
+            Solicitar solo un día antes.
+        </div>
+
+
+        <div class="productos">
+
+            <!-- CAZUELEJA -->
+            <div class="producto">
+
+                <img
+                    src="foto-cazueleja.jpeg"
+                    alt="Cazueleja"
+                >
+
+                <div class="producto-contenido">
+
+                    <h3>Cazueleja</h3>
+
+                    <p>10 piezas</p>
+
+                    <div class="precio">$230</div>
+
+                    <ul>
+                        <li>✓ Pan artesanal con sabor tradicional</li>
+                        <li>✓ Elaborada con ingredientes de calidad</li>
+                        <li>✓ Suave, casera y con sabor a hogar</li>
+                    </ul>
+
+                    <a
+                        class="boton whatsapp"
+                        target="_blank"
+                        href="https://wa.me/529616581640?text=Hola,%20quiero%20hacer%20un%20encargo%20de%20Cazueleja%20de%2010%20piezas%20por%20$230."
+                    >
+                        HACER ENCARGO
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ROLES -->
+            <div class="producto">
+
+                <img
+                    src="foto-roles.jpeg"
+                    alt="Roles de Canela"
+                >
+
+                <div class="producto-contenido">
+
+                    <h3>Roles de Canela</h3>
+
+                    <p>24 piezas</p>
+
+                    <div class="precio">$432</div>
+
+                    <ul>
+                        <li>✓ Roles suaves y esponjosos</li>
+                        <li>✓ Elaborados con canela</li>
+                        <li>✓ Cubierta deliciosa y abundante</li>
+                    </ul>
+
+                    <a
+                        class="boton whatsapp"
+                        target="_blank"
+                        href="https://wa.me/529616581640?text=Hola,%20quiero%20hacer%20un%20encargo%20de%20Roles%20de%20Canela%20de%2024%20piezas%20por%20$432."
+                    >
+                        HACER ENCARGO
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BIG YEMA -->
+            <div class="producto">
+
+                <img
+                    src="foto-big-yema.jpeg"
+                    alt="Big Yema"
+                >
+
+                <div class="producto-contenido">
+
+                    <h3>Big Yema</h3>
+
+                    <p>10 piezas</p>
+
+                    <div class="precio">$200</div>
+
+                    <ul>
+                        <li>✓ Pan artesanal de gran tamaño</li>
+                        <li>✓ Suave y delicioso</li>
+                        <li>✓ Con el tradicional sabor a hogar</li>
+                    </ul>
+
+                    <a
+                        class="boton whatsapp"
+                        target="_blank"
+                        href="https://wa.me/529616581640?text=Hola,%20quiero%20hacer%20un%20encargo%20de%20Big%20Yema%20de%2010%20piezas%20por%20$200."
+                    >
+                        HACER ENCARGO
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PAQUETES AL MAYOREO -->
+<section>
+
+    <div class="contenedor">
+
+        <div class="titulo">
+
+            <h2>Paquetes al mayoreo</h2>
+
+            <p class="subtitulo">
+                Cualquiera de nuestros paquetes en $400
+            </p>
+
+        </div>
+
+
+        <div class="productos">
+
+            <!-- TRADICIONAL -->
+            <div class="producto">
+
+                <img
+                    src="foto-tradicional.jpeg"
+                    alt="Paquete Tradicional"
+                >
+
+                <div class="producto-contenido">
+
+                    <h3>Tradicional</h3>
+
+                    <div class="precio">$400</div>
+
+                    <ul>
+                        <li>✓ 100 piezas de 30 grs</li>
+                        <li>✓ Surtido de 18 modelos diferentes</li>
+                        <li>✓ Pan recién hecho</li>
+                        <li>✓ Precio competitivo para reventa</li>
+                    </ul>
+
+                    <a
+                        class="boton whatsapp"
+                        target="_blank"
+                        href="https://wa.me/529616581640?text=Hola,%20quiero%20pedir%20el%20Paquete%20Tradicional%20de%20$400."
+                    >
+                        PEDIR POR WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ARTESANAL -->
+            <div class="producto">
+
+                <img
+                    src="foto-artesanal.jpeg"
+                    alt="Paquete Artesanal"
+                >
+
+                <div class="producto-contenido">
+
+                    <h3>Artesanal</h3>
+
+                    <div class="precio">$400</div>
+
+                    <ul>
+                        <li>✓ 50 piezas de 60 gr</li>
+                        <li>✓ Masa enriquecida y textura suave</li>
+                        <li>✓ Diferentes rellenos</li>
+                        <li>✓ 11 sabores distintos</li>
+                    </ul>
+
+                    <a
+                        class="boton whatsapp"
+                        target="_blank"
+                        href="https://wa.me/529616581640?text=Hola,%20quiero%20pedir%20el%20Paquete%20Artesanal%20de%20$400."
+                    >
+                        PEDIR POR WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMBO -->
+            <div class="producto">
+
+                <img
+                    src="foto-combo-variedad.jpeg"
+                    alt="Combo Variedad"
+                >
+
+                <div class="producto-contenido">
+
+                    <h3>Combo Variedad</h3>
+
+                    <span class="etiqueta mas-pedido">
+                        ⭐ MÁS PEDIDO
+                    </span>
+
+                    <div class="precio">$400</div>
+
+                    <ul>
+                        <li>✓ 50 Tradicional + 25 Artesanal</li>
+                        <li>✓ Mayor variedad</li>
+                        <li>✓ Más opciones para tus clientes</li>
+                        <li>✓ rico PAN de Chiapa de Corzo</li>
+                    </ul>
+
+                    <a
+                        class="boton whatsapp"
+                        target="_blank"
+                        href="https://wa.me/529616581640?text=Hola,%20quiero%20pedir%20el%20Combo%20Variedad%20de%20$400."
+                    >
+                        PEDIR POR WHATSAPP
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REFIERE Y GANA -->
+<section class="refiere">
+
+    <a
+        class="boton boton-refiere"
+        target="_blank"
+        href="https://wa.me/529616581640?text=Hola%20muy%20buen%20día.%0A%0AGracias%20por%20contactarnos.%0A%0APara%20hacer%20válida%20tu%20referencia,%20por%20favor%20llena%20todos%20los%20datos%20solicitados:%0A%0ATu%20nombre%0A%0ANombre%20de%20tu%20referido%0A%0ANúmero%20de%20teléfono%20de%20tu%20referido%0A%0AColonia%20y%20municipio%20donde%20se%20encuentra%20la%20persona%20que%20refieres.%0A%0ANota%20importante:%0A%0ATu%20referencia%20será%20válida%20y%20podrás%20reclamar%20tu%20premio%20(regalo%20sorpresa)%20únicamente%20cuando%20el%20pedido%20esté%20confirmado%20y%20el%20pago%20de%20su%20paquete%20al%20mayoreo%20haya%20sido%20efectuado.%0A%0A(No%20vendemos%20al%20menudeo)%0A%0AEstaremos%20atentos%20a%20tu%20información.%20Gracias.%20Te%20mantendremos%20al%20tanto%20por%20este%20medio."
+    >
+        🎁 REFIERE Y GANA
+    </a>
+
+</section>
+
+
+<!-- DINÁMICA DEL MES -->
+<section class="dinamica">
+
+    <a
+        class="boton boton-dinamica"
+        target="_blank"
+        href="https://wa.me/529616581640?text=Hola,%20quiero%20participar%20en%20la%20Dinámica%20del%20Mes.%0A%0AProporciona%20todos%20los%20datos:%0A%0ANombre%0ADirección%0ANombre%20del%20negocio%0ANúmero%20de%20teléfono%0AUna%20reseña%20de%20por%20qué%20quieres%20chiapaneSCito.%0A%0APara%20participar,%20es%20importante%20llenar%20todos%20los%20datos%20solicitados.%20Si%20la%20información%20está%20incompleta%20o%20los%20datos%20no%20coinciden,%20la%20participación%20no%20podrá%20ser%20validada."
+    >
+        🎉 DINÁMICA DEL MES
+    </a>
+
+</section>
+
+
+<!-- PUNTO DE VENTA -->
+<section class="punto-venta">
+
+    <div class="contenedor">
+
+        <h2>
+            ¿Quieres ser un punto de venta exclusivo de chiapaneSCito?
+        </h2>
+
+        <p>
+            Escribe un WhatsApp con la palabra
+            <strong>PUNTO DE VENTA</strong>
+            y ve si reúnes los requisitos.
+        </p>
+
+        <a
+            class="boton"
+            target="_blank"
+            href="https://wa.me/529614553380?text=PUNTO%20DE%20VENTA"
+        >
+            CLICK AQUÍ
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- REDES SOCIALES AL FINAL -->
+<section class="redes">
+
+    <div class="titulo">
+
+        <h2>Síguenos</h2>
+
+    </div>
+
+    <a
+        target="_blank"
+        href="https://www.facebook.com/share/19Zusgjb4m/"
+    >
+        <span class="logo-red logo-facebook">f</span>
+        Facebook
+    </a>
+
+    <a
+        target="_blank"
+        href="https://www.tiktok.com/@chiapanescito?_r=1&_t=ZS-99cjxwLqCTl"
+    >
+        <span class="logo-red logo-tiktok">♪</span>
+        TikTok
+    </a>
+
+</section>
+
+
+<!-- WHATSAPP FLOTANTE -->
+<a
+    class="whatsapp-flotante"
+    target="_blank"
+    href="https://wa.me/529616581640?text=Hola,%20quiero%20información%20sobre%20chiapaneSCito."
+    aria-label="WhatsApp"
+>
+    ☎
+</a>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        <strong>chiapaneSCito</strong>
+    </p>
+
+    <p>
+        rico PAN de Chiapa de Corzo
+    </p>
+
+    <p>
+        Punto de venta · Pan al mayoreo
+    </p>
+
+    <p style="margin-top:10px;">
+        © 2026 chiapaneSCito
+    </p>
+
+</footer>
+
+</body>
+</html>

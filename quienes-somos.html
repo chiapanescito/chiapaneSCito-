@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiénes Somos | chiapaneSCito</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff8ef;
+            color: #3b2114;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background: linear-gradient(135deg, #3b1d0f, #6b3518);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        .logo {
+            width: 130px;
+            max-width: 80%;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 18px;
+            color: #ffd89b;
+        }
+
+        /* CONTENIDO */
+        .contenedor {
+            max-width: 1000px;
+            margin: auto;
+            padding: 45px 20px;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .titulo h2 {
+            font-size: 36px;
+            color: #6b3518;
+            margin-bottom: 10px;
+        }
+
+        .titulo p {
+            font-size: 18px;
+            color: #6d5141;
+        }
+
+        /* IMAGEN */
+        .imagen-nosotros {
+            width: 100%;
+            max-width: 900px;
+            display: block;
+            margin: 0 auto 35px;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0,0,0,.18);
+        }
+
+        /* TARJETAS */
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .tarjeta {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.10);
+            border-top: 5px solid #d28a32;
+        }
+
+        .tarjeta h3 {
+            color: #6b3518;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .tarjeta p {
+            line-height: 1.7;
+            color: #5b4639;
+        }
+
+        /* BOTÓN */
+        .volver {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .boton {
+            display: inline-block;
+            text-decoration: none;
+            background: #d28a32;
+            color: white;
+            padding: 16px 35px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(180,100,25,.25);
+        }
+
+        .boton:hover {
+            background: #b66d1c;
+        }
+
+        /* PIE */
+        footer {
+            background: #3b1d0f;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+        }
+
+        footer strong {
+            color: #ffd89b;
+        }
+
+        /* CELULAR */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            .titulo h2 {
+                font-size: 28px;
+            }
+
+            .contenedor {
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <img src="logo-chiapanescito.png"
+             alt="Logo chiapaneSCito"
+             class="logo">
+
+        <h1>chiapaneSCito</h1>
+
+        <p>rico PAN de Chiapa de Corzo</p>
+
+    </header>
+
+
+    <!-- CONTENIDO -->
+    <main class="contenedor">
+
+        <div class="titulo">
+
+            <h2>¿Quiénes Somos?</h2>
+
+            <p>
+                Conoce un poco más sobre chiapaneSCito
+            </p>
+
+        </div>
+
+
+        <!-- IMAGEN -->
+        <!--
+        IMPORTANTE:
+        Aquí debes poner la imagen de "Quiénes Somos"
+        dentro de tu carpeta "pagina pan".
+        -->
+
+        <img src="quienes-somos.jpeg"
+             alt="Quiénes somos chiapaneSCito"
+             class="imagen-nosotros">
+
+
+        <!-- INFORMACIÓN -->
+        <section class="tarjetas">
+
+            <div class="tarjeta">
+
+                <h3>🍞 Nuestra esencia</h3>
+
+                <p>
+                    En chiapaneSCito llevamos hasta tu negocio
+                    el sabor de un pan artesanal con tradición,
+                    calidad y ese toque que recuerda al sabor de hogar.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <h3>🏠 Nuestro sabor</h3>
+
+                <p>
+                    Elaboramos pan inspirado en los sabores y
+                    tradiciones de Chiapa de Corzo, buscando que
+                    cada pieza conserve ese sabor especial que
+                    nuestros clientes disfrutan.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <h3>🤝 Para tu negocio</h3>
+
+                <p>
+                    Nuestro objetivo es apoyar a tiendas,
+                    cafeterías, restaurantes, distribuidores y
+                    emprendedores con pan caliente y recién hecho
+                    para su venta.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTÓN REGRESAR -->
+        <div class="volver">
+
+            <a href="index.html" class="boton">
+                ← REGRESAR A LA PÁGINA PRINCIPAL
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <strong>chiapaneSCito</strong>
+
+        <p>rico PAN de Chiapa de Corzo</p>
+
+        <p>Pan al mayoreo · Punto de venta</p>
+
+        <p>© 2026 chiapaneSCito</p>
+
+    </footer>
+
+</body>
+</html>
